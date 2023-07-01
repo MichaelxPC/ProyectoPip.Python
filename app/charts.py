@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 
-def generate_bar_chart(labels, values):
+def generate_bar_chart(name, labels, values):
   fig, ax = plt.subplots()
   ax.bar(labels, values)
-  plt.savefig("bar.png")
+  plt.savefig(f"./imgs/{name}bar.png")
   plt.close()
 
 def generate_pie_chart(labels, values):
@@ -16,5 +16,5 @@ def generate_pie_chart(labels, values):
 if __name__ == '__main__':
   labels = ['a', 'b', 'c']
   values = [10, 40, 800]
-  # generate_bar_chart(labels, values)
+  generate_bar_chart(labels, values)
   generate_pie_chart(labels, values)
